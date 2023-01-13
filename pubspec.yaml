@@ -1,7 +1,8 @@
 name: units_dart
-description: A new Flutter package project.
+description: convert units module.
 version: 0.0.1
 homepage:
+repository: https://github.com/RikitoNoto/units_dart
 
 environment:
   sdk: '>=2.18.4 <3.0.0'
