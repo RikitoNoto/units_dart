@@ -25,7 +25,7 @@ class Meter extends Distance{
   @override String get toStringRaw => "${value}m";
 
   @override Meter get meter => Meter(kilometer: _kilometer, meter: _meter, millimeter: _millimeter, micrometer: _micrometer);
-  @override Yard get yard => Yard((value * 10936) / 10000); // 1m is 1.0936yd
+  @override Yard get yard => Yard(yard: (value * 10936) / 10000); // 1m is 1.0936yd
 
   num _getScalingValue({
     required num meterMulti,
