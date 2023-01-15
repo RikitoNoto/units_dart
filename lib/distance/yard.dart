@@ -37,6 +37,8 @@ class Yard extends Distance{
     return _getScalingValue(yardMulti: 1);
   }
 
+  num get mile => furlong / 8;
+
   num get furlong {
     num sum = 0;
     if(_mile != null) sum += _mile! * 8;

@@ -347,5 +347,20 @@ void scalingValueTest() {
       Yard yard = Yard(inch: 0.1, feet: 0.1, yard: 0.1, rod: 0.1, pole: 0.1, perch: 0.1, chain: 0.1, furlong: 0.1, mile: 0.1,);
       expect(yard.furlong, 0.9175 + 10/22000 + 10/66000 + 10/792000);
     });
+
+    test('should get the scale of mile 0', (){
+      Yard yard = Yard(inch: 0, feet: 0, yard: 0, rod: 0, pole: 0, perch: 0, chain: 0, furlong: 0, mile: 0,);
+      expect(yard.mile, 0);
+    });
+
+    test('should get the scale of mile 80', (){
+      Yard yard = Yard(inch: 80, feet: 80, yard: 80, rod: 80, pole: 80, perch: 80, chain: 80, furlong: 80, mile: 80,);
+      expect(yard.mile, 91.75 + 10/220 + 10/660 + 10/7920);
+    });
+
+    test('should get the scale of mile 0.8', (){
+      Yard yard = Yard(inch: 0.8, feet: 0.8, yard: 0.8, rod: 0.8, pole: 0.8, perch: 0.8, chain: 0.8, furlong: 0.8, mile: 0.8,);
+      expect(yard.mile, 0.9175 + 10/22000 + 10/66000 + 10/792000);
+    });
   });
 }
