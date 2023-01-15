@@ -17,13 +17,15 @@ class Meter extends Distance{
   final num? _millimeter;
   final num? _micrometer;
 
-  @override num get value => meter;
   num get kilometer => _getScalingValue(meterMulti: 0.001,);
-  num get meter => _getScalingValue(meterMulti: 1,);
+  @override num get value => _getScalingValue(meterMulti: 1,);
   num get millimeter => _getScalingValue(meterMulti: 1000,);
   num get micrometer => _getScalingValue(meterMulti: 1000000,);
 
   @override String get toStringRaw => "${value}m";
+
+  @override Meter get meter => Meter(kilometer: _kilometer, meter: _meter, millimeter: _millimeter, micrometer: _micrometer);
+  @override Yard get yard => Yard((value * 10936) / 10000); // 1m is 1.0936yd
 
   num _getScalingValue({
     required num meterMulti,
