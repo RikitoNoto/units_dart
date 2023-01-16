@@ -15,8 +15,8 @@ The Meter class provides the following scale methods.
 
 **Example: scaling meter unit**
 ```dart
-  var meter = Meter(1);
-  print(meter.meter);       // 1
+  var meter = Meter(meter: 1);
+  print(meter.value);       // 1
   print(meter.kilometer);   // 0.001
   print(meter.centimeter);  // 100
   print(meter.millimeter);  // 1000
@@ -36,13 +36,13 @@ The Yard class provides the following scale methods.
 
 **Example: scaling yard unit**
 ```dart
-  var yard = Yard(1);
-  print(yard.yard);   // 1
+  var yard = Yard(yard: 1);
+  print(yard.value);   // 1
   print(yard.feet);   // 3
   print(yard.inch);   // 36
 
   // it be able to create from other scale.
-  var yard = Yard.fromMile(1);
+  var yard = Yard(mile: 1);
   print(yard.yard);       // 1760
   print(yard.furlong);    // 8
   print(yard.chain);      // 80
